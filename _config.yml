@@ -1,0 +1,40 @@
+# Site settings
+title: "Priti Biyani"
+baseurl: "" # the subpath of your site, e.g. /blog/
+permalink: /blog/:title
+url: "https://pritibiyani.github.io" # the base hostname & protocol for your site
+twitter_username: pritibiyani
+github_username:  pritibiyani
+description: "Thoughts, learning, experiences and ideas on technology, life, art and everything else! ..."
+yaml gems: ['emoji_for_jekyll']
+
+# Build settings
+markdown: kramdown
+comments: True
+highlighter: rouge
+gems:
+  - jemoji
+
+
+defaults:
+  -
+    scope:
+      path: "posts" # an empty string here means all files in the project
+    values:
+      layout: post
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: my_categories
+    values:
+      layout: blog_by_category
+
+collections:
+  my_categories:
+    output: true
+    permalink: /blog/category/:name/
+  my_tags:
+      output: true
+      permalink: /blog/tag/:name/
+      
+      
