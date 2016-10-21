@@ -5,7 +5,7 @@ layout: default
 {% for cats in site.my_categories %}
 
 
-<a href="{{ themes.url | prepend: site.baseurl }}">
+<a href="{{ cats.url | prepend: site.baseurl }}">
 {{ cats.name }}
 </a>
 <h4>{{cats.slug}}</h4>
